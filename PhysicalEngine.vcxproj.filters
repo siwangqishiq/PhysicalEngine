@@ -24,12 +24,18 @@
     <ClInclude Include="Vector3.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="RenderOpengl.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Vector3.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderOpengl.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
