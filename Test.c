@@ -29,15 +29,19 @@ void init()
 Color color = {0,0,0};
 void drawWave();
 
+
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//TODO update
-	drawPoint(300,400,color);
-	drawLine(300,400,400,500,color);
+	//drawPoint(300,400,color);
+	//drawLine(300,400,400,500,color);
+	//drawWave();
 
-	drawWave();
+	//drawRect(200,300,100,100,color);
+	drawCircle(300,400,100,color);
+	drawRect(0,0,WIDTH,WIDTH,color);
 
 	glutSwapBuffers();
 	glutPostRedisplay();
