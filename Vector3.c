@@ -58,7 +58,7 @@ void normalize(Vector3 *pVec)
 	if(len > 0)
 	{
 		real lenD = 1/len;
-		pVec->x  = lenD* (pVec->x);
+		pVec->x  = lenD * (pVec->x);
 		pVec->y  = lenD * (pVec->y);
 		pVec->z  = lenD * (pVec->z);
 	}//endif
