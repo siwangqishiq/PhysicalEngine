@@ -7,18 +7,36 @@ long lastTime = 0;
 
 void testVector()
 {
-	Vector3 *pVec;
-	real len = 0;
+	//Vector3 *pVec;
+	//real len = 0;
+	//
+	//createVector3(1000,0,0,&pVec);
+	//
+	//printVector3(pVec);
+	//len = magnitude(pVec);
+	//printf("%10f\n",len);
+	//
+	//normalize(pVec);
+	//printVector3(pVec);
+	//freeVector3(pVec);
 
-	createVector3(1000,0,0,&pVec);
 
-	printVector3(pVec);
-	len = magnitude(pVec);
-	printf("%10f\n",len);
+	Vector3 *pVec1;
+	Vector3 *pVec2;
+	createVector3(1,2,3,&pVec1);
+	createVector3(4,5,6,&pVec2);
+	addVector(pVec1,pVec2);
+	printVector3(pVec1);
+	printVector3(pVec2);
 
-	normalize(pVec);
-	printVector3(pVec);
-	freeVector3(pVec);
+	pVec1->x = 1;
+	pVec1->y = 2;
+	pVec1->z = 3;
+	subtractVector(pVec1,pVec2);
+	printVector3(pVec1);
+	printVector3(pVec2);
+	freeVector3(pVec1);
+	freeVector3(pVec2);
 }
 
 void init()
@@ -40,8 +58,8 @@ void display()
 	//drawWave();
 
 	//drawRect(200,300,100,100,color);
-	drawCircle(300,400,100,color);
-	drawRect(0,0,WIDTH,WIDTH,color);
+	//drawCircle(300,400,100,color);
+	//drawRect(0,0,WIDTH,WIDTH,color);
 
 	glutSwapBuffers();
 	glutPostRedisplay();

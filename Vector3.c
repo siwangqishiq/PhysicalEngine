@@ -64,4 +64,20 @@ void normalize(Vector3 *pVec)
 	}//endif
 }
 
+//向量加法
+void addVector(Vector3 *pVec,const Vector3 *pAddVec)
+{
+	pVec->x += pAddVec->x;
+	pVec->y += pAddVec->y;
+	pVec->z += pAddVec->z;
+}
+
+//向量减法
+void subtractVector(Vector3 *pVec,const Vector3 *pSubVec)
+{
+	pVec->x -= pSubVec->x;
+	pVec->y -= pSubVec->y;
+	pVec->z -= pSubVec->z;
+}
+
 
