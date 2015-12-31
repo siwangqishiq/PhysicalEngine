@@ -13,7 +13,7 @@ int createVector3(real x,real y,real z,Vector3 **pVector)
 	p->z = z;
 
 	*pVector = p;
-	return SUCCESS;
+	return OK;
 }
 
 //调试时打印向量值
@@ -80,4 +80,23 @@ void subtractVector(Vector3 *pVec,const Vector3 *pSubVec)
 	pVec->z -= pSubVec->z;
 }
 
+//向量叉乘
+int crossMultiplyVectors(const Vector3 *pA,const Vector3 *pB,Vector3 *pResult)
+{
+	if(pResult == NULL)
+		return ERROR;
+
+	pResult->x = (pA->y) * (pB->z) - (pA->z) * (pB->y);
+	pResult->y = (pA->z) * (pB->x) - (pA->x) * (pB->z);
+	pResult->z = (pA->x) * (pB->y) - (pA->y) * (pB->x);
+
+	return OK;
+}
+
+//向量点乘
+//return 点乘结果
+real dotMultiplyVectors(const Vector3 *pA,const Vector3 *pB)
+{
+	return (pA->x)*(pB->x) + (pA->y)*(pB->y) + (pA->z)*(pB->z);
+}
 

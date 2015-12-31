@@ -23,20 +23,27 @@ void testVector()
 
 	Vector3 *pVec1;
 	Vector3 *pVec2;
-	createVector3(1,2,3,&pVec1);
-	createVector3(4,5,6,&pVec2);
-	addVector(pVec1,pVec2);
-	printVector3(pVec1);
-	printVector3(pVec2);
+	Vector3 vector = {0};
+	createVector3(2,2,1,&pVec1);
+	createVector3(0,1,0,&pVec2);
 
-	pVec1->x = 1;
-	pVec1->y = 2;
-	pVec1->z = 3;
-	subtractVector(pVec1,pVec2);
+	crossMultiplyVectors(pVec1,pVec2,&vector);
+
+	//addVector(pVec1,pVec2);
 	printVector3(pVec1);
 	printVector3(pVec2);
-	freeVector3(pVec1);
-	freeVector3(pVec2);
+	printVector3(&vector);
+
+	printf("dot multi %5f\n",dotMultiplyVectors(pVec1,pVec2));
+
+	//pVec1->x = 1;
+	//pVec1->y = 2;
+	//pVec1->z = 3;
+	//subtractVector(pVec1,pVec2);
+	//printVector3(pVec1);
+	//printVector3(pVec2);
+	//freeVector3(pVec1);
+	//freeVector3(pVec2);
 }
 
 void init()

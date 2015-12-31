@@ -40,4 +40,13 @@ void addVector(Vector3 *pVec,const Vector3 *pAddVec);
 //向量减法
 void subtractVector(Vector3 *pVec,const Vector3 *pSubVec);
 
+//向量叉乘
+//pResult   叉乘之后的结果 存放于pResult指针指向的位置
+int crossMultiplyVectors(const Vector3 *pVec1,const Vector3 *pVec2,Vector3 *pResult);
+
+//向量点乘
+// params Vector3 a ,b
+//return 点乘结果
+real dotMultiplyVectors(const Vector3 *pA,const Vector3 *pB);
+
 #endif
